@@ -5,4 +5,7 @@ module.exports = (express, app)=>{
     app.get('/loginForm', (req,res,next)=>{
         res.render('loginForm');
     });
+    app.get('/signupForm', (req,res,next)=>{
+        res.render('signupForm');
+    });
 };

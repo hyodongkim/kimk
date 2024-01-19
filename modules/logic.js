@@ -48,7 +48,7 @@ module.exports = (express, app)=>{
                 user.userid === req.body.userid
             )) res.redirect('/loginForm');
         req.db.users.push({
-            key: req.db.users.reduce((prev, now)=> prev > now ? prev : now) + 1,
+            key: req.db.users.reduce((prev, now)=> prev > now ? prev : now).key + 1,
             userid:req.body.userid,
             userpw:req.body.userpw
         });
