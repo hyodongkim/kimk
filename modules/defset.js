@@ -33,7 +33,7 @@ module.exports = (express, app)=>{
                 signed: true
             })};
         };
-        res.totalCookies = {...req.cookies, ...req.signedCokkies};
+        res.totalCookies = {...req.cookies, ...req.signedCookies};
         next();
     });
     app.use(require('cors')({
